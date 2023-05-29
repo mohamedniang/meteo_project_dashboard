@@ -18,7 +18,7 @@ const logout = () => {
     <div
       class="h-14 flex justify-between md:justify-center items-center w-full md:w-52 px-4"
     >
-      <div class="font-bold">NuxiAdmin</div>
+      <div class="font-bold">Données météo</div>
       <button
         class="block md:hidden float-right"
         @click="sidebarStore.mobileOpen = !sidebarStore.mobileOpen"
@@ -48,7 +48,7 @@ const logout = () => {
             <button>
               <img
                 class="w-10 h-10 rounded-full border border-[#1d152a7a]"
-                src="/images/profile.jpeg"
+                src="/images/profile.png"
                 alt=""
               />
             </button>

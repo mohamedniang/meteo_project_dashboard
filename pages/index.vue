@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TwFeather } from "vue3-tailwind";
+import { TwFeather, TwButton } from "vue3-tailwind";
 
 useHead({
   title: "Dashboard",
@@ -8,7 +8,7 @@ useHead({
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold">Dashboard</h1>
+    <h1 class="text-3xl font-bold">Données de la ville de DAKAR</h1>
     <hr class="my-2 border dark:border-gray-700" />
     <div class="grid grid-cols-12 gap-2">
       <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
@@ -16,16 +16,16 @@ useHead({
           class="p-2 rounded-lg bg-white dark:bg-gray-800 shadow flex justify-between gap-2 h-full"
         >
           <div class="flex flex-col justify-between">
-            <div class="text-gray-500 dark:text-gray-400 font-medium">Today's Money</div>
+            <div class="text-gray-500 dark:text-gray-400 font-medium">Humidité Relative</div>
             <div class="text-gray-700 dark:text-gray-200 font-bold text-lg">
-              $53,000
-              <span class="text-sm text-yellow-600">+55%</span>
+              48%
+              <span class="text-sm text-yellow-600">+1%</span>
             </div>
           </div>
           <div
             class="bg-gradient-to-tl from-gray-600 to-gray-900 rounded-lg text-white p-2 flex items-center justify-center px-4"
           >
-            <TwFeather type="dollar-sign"></TwFeather>
+            <TwFeather type="droplet"></TwFeather>
           </div>
         </div>
       </div>
@@ -34,16 +34,16 @@ useHead({
           class="p-2 rounded-lg bg-white dark:bg-gray-800 shadow flex justify-between gap-2 h-full"
         >
           <div class="flex flex-col justify-between">
-            <div class="text-gray-500 dark:text-gray-400 font-medium">Today's Users</div>
+            <div class="text-gray-500 dark:text-gray-400 font-medium">Température</div>
             <div class="text-gray-700 dark:text-gray-200 font-bold text-lg">
-              2,300
-              <span class="text-sm text-yellow-600">+3%</span>
+              31°C
+              <span class="text-sm text-yellow-600">+0°C</span>
             </div>
           </div>
           <div
             class="bg-gradient-to-tl from-gray-600 to-gray-900 rounded-lg text-white p-2 flex items-center justify-center px-4"
           >
-            <TwFeather type="aperture"></TwFeather>
+            <TwFeather type="thermometer"></TwFeather>
           </div>
         </div>
       </div>
@@ -52,86 +52,95 @@ useHead({
           class="p-2 rounded-lg bg-white dark:bg-gray-800 shadow flex justify-between gap-2 h-full"
         >
           <div class="flex flex-col justify-between">
-            <div class="text-gray-500 dark:text-gray-400 font-medium">New Clients</div>
+            <div class="text-gray-500 dark:text-gray-400 font-medium">Vitesse du vent</div>
             <div class="text-gray-700 dark:text-gray-200 font-bold text-lg">
-              +3,462
-              <span class="text-sm text-red-600">+2%</span>
+              21Km/h
+              <span class="text-sm text-red-600">+3Km/h</span>
             </div>
           </div>
           <div
             class="bg-gradient-to-tl from-gray-600 to-gray-900 rounded-lg text-white p-2 flex items-center justify-center px-4"
           >
-            <TwFeather type="users"></TwFeather>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
-        <div
-          class="p-2 rounded-lg bg-white dark:bg-gray-800 shadow flex justify-between gap-2 h-full"
-        >
-          <div class="flex flex-col justify-between">
-            <div class="text-gray-500 dark:text-gray-400 font-medium">Sales</div>
-            <div class="text-gray-700 dark:text-gray-200 font-bold text-lg">
-              $103,430
-              <span class="text-sm text-yellow-600">+5%</span>
-            </div>
-          </div>
-          <div
-            class="bg-gradient-to-tl from-gray-600 to-gray-900 rounded-lg text-white p-2 flex items-center justify-center px-4"
-          >
-            <TwFeather type="shopping-cart"></TwFeather>
+            <TwFeather type="wind"></TwFeather>
           </div>
         </div>
       </div>
     </div>
     <div class="grid grid-cols-12 gap-2 mt-2">
-      <div class="col-span-12 md:col-span-7">
-        <div class="flex gap-2 rounded-lg p-4 shadow bg-white dark:bg-gray-800">
+      <div class="col-span-12">
+        <div class="flex gap-2 rounded-lg p-4 shadow bg-white dark:bg-gray-800 justify-between">
           <div class="flex flex-col justify-between">
             <div class="">
-              <div class="text-gray-500 dark:text-gray-400 font-medium">Built by developers</div>
+              <div class="text-gray-500 dark:text-gray-400 font-medium">Sur les 15 dernières minutes</div>
               <div class="text-gray-700 dark:text-gray-200 font-bold text-xl">
-                Nuxt 3 Admin Dashboard
+                Température
               </div>
               <div class="">
-                From colors, cards, typography to complex elements, you will
-                find the full documentation.
+                Avec une température moyenne d'environ: 29°C
               </div>
             </div>
-            <div class="">Read More ...</div>
+            <div class="">
+              <TwButton variant="primary" :ripple="true">
+                Recalculer
+              </TwButton>
+            </div>
           </div>
           <div
             class="rounded-lg bg-gradient-to-tl from-gray-50 to-gray-200 dark:from-gray-700 flex items-center justify-center w-52 h-52"
           >
             <img
               class="w-32 h-32 rounded object-cover"
-              src="/images/rocket.png"
+              src="/images/temperature.png"
               alt=""
             />
           </div>
         </div>
       </div>
-      <div class="col-span-12 md:col-span-5">
-        <div class="flex gap-2 bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+      <div class="col-span-12">
+        <div class="flex gap-2 rounded-lg p-4 shadow bg-white dark:bg-gray-800 justify-between">
           <div class="flex flex-col justify-between">
             <div class="">
-              <div class="text-gray-500 dark:text-gray-400 font-medium">Built by developers</div>
+              <div class="text-gray-500 dark:text-gray-400 font-medium">Sur les 15 dernières minutes</div>
               <div class="text-gray-700 dark:text-gray-200 font-bold text-xl">
-                Nuxt 3 Admin Dashboard
+                Humidité Relative
               </div>
               <div class="">
-                From colors, cards, typography to complex elements, you will
-                find the full documentation.
+                Avec une humidité moyenne d'environ: 51%
               </div>
             </div>
-            <div class="">Read More ...</div>
+            <div class="">Recalculer</div>
           </div>
           <div
             class="rounded-lg bg-gradient-to-tl from-gray-50 to-gray-200 dark:from-gray-700 flex items-center justify-center w-52 h-52"
           >
             <img
               class="w-32 h-32 rounded object-cover"
-              src="/images/rocket.png"
+              src="/images/humidity.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-span-12">
+        <div class="flex gap-2 rounded-lg p-4 shadow bg-white dark:bg-gray-800 justify-between">
+          <div class="flex flex-col justify-between">
+            <div class="">
+              <div class="text-gray-500 dark:text-gray-400 font-medium">Sur les 15 dernières minutes</div>
+              <div class="text-gray-700 dark:text-gray-200 font-bold text-xl">
+                Vitesse du vent
+              </div>
+              <div class="">
+                Avec une vitesse moyenne d'environ:21 km/h
+              </div>
+            </div>
+            <div class="">Recalculer</div>
+          </div>
+          <div
+            class="rounded-lg bg-gradient-to-tl from-gray-50 to-gray-200 dark:from-gray-700 flex items-center justify-center w-52 h-52"
+          >
+            <img
+              class="w-32 h-32 rounded object-cover"
+              src="/images/wind.png"
               alt=""
             />
           </div>
