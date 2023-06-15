@@ -28,7 +28,9 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
     "@vercel/analytics": "^1.0.0",
+    "chart.js": "^4.3.0",
     "feather-icons": "^4.29.0",
+    "vue-chartjs": "^5.2.0",
     "vue3-tailwind": "^0.3.4"
   }
 }

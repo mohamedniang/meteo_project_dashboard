@@ -29,7 +29,7 @@ const cookieDark = useCookie('dark-mode')
           ></div>
         </div>
       </div>
-      <div
+      <!-- <div
         class="text-center flex items-center gap-1 justify-center text-gray-200"
       >
         Developed with
@@ -41,7 +41,7 @@ const cookieDark = useCookie('dark-mode')
         >
           Wailan
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

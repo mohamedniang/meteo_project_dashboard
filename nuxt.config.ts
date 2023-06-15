@@ -17,9 +17,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiSecret: "",
     public: {
-      apiBase: "/api",
+      apiBase: "http://localhost:8000",
     },
   },
+  // plugins: [{ src: "~/plugins/chart.js", mode: "client" }],
   modules: [
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
